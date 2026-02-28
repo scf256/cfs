@@ -1,5 +1,3 @@
-import { Layers } from "lucide-react";
-
 const services = [
   { name: "EM2 Industrial Flooring", desc: "Heavy-duty resin flooring for extreme industrial environments." },
   { name: "DMI Industrial Flooring", desc: "High-performance floor systems for demanding facilities." },
@@ -23,13 +21,13 @@ const Services = () => {
     <>
       <section className="section-padding bg-card">
         <div className="container mx-auto px-4">
-          <span className="inline-block px-3 py-1 rounded-full text-xs font-semibold tracking-wider uppercase bg-primary/15 text-primary border border-primary/20 mb-4">
+          <span className="inline-block px-3 py-1 rounded-full text-xs font-semibold tracking-wider uppercase bg-primary/15 text-primary border border-primary/20 mb-4 animate-fade-in">
             Our Services
           </span>
-          <h1 className="text-4xl md:text-5xl font-heading font-extrabold text-foreground max-w-3xl">
+          <h1 className="text-4xl md:text-5xl font-heading font-extrabold text-foreground max-w-3xl animate-fade-up opacity-0" style={{ animationDelay: "0.15s" }}>
             Flooring <span className="text-primary">Solutions</span>
           </h1>
-          <p className="mt-4 text-lg text-muted-foreground max-w-2xl">
+          <p className="mt-4 text-lg text-muted-foreground max-w-2xl animate-fade-up opacity-0" style={{ animationDelay: "0.3s" }}>
             We offer 15+ specialized flooring systems for every industry and environment.
           </p>
         </div>
@@ -39,9 +37,13 @@ const Services = () => {
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {services.map((s, i) => (
-              <div key={s.name} className="glass-card rounded-lg p-6 hover:border-primary/40 transition-colors group">
+              <div
+                key={s.name}
+                className="glass-card rounded-lg p-6 hover:border-primary/40 transition-all duration-300 group hover-scale animate-fade-up opacity-0"
+                style={{ animationDelay: `${0.05 + i * 0.06}s` }}
+              >
                 <div className="flex items-start gap-4">
-                  <div className="flex-shrink-0 w-10 h-10 rounded bg-primary/10 flex items-center justify-center text-primary font-heading font-bold text-sm">
+                  <div className="flex-shrink-0 w-10 h-10 rounded bg-primary/10 flex items-center justify-center text-primary font-heading font-bold text-sm group-hover:bg-primary group-hover:text-primary-foreground transition-colors duration-300">
                     {String(i + 1).padStart(2, "0")}
                   </div>
                   <div>
