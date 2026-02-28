@@ -16,7 +16,7 @@ const Navbar = () => {
   const location = useLocation();
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-background/90 backdrop-blur-lg border-b border-border/50">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-lg border-b border-border shadow-sm">
       <div className="container mx-auto flex items-center justify-between h-16 md:h-20">
         <Link to="/" className="flex items-center gap-2">
           <div className="w-8 h-8 rounded bg-primary flex items-center justify-center font-heading font-black text-primary-foreground text-sm">
@@ -27,19 +27,18 @@ const Navbar = () => {
           </span>
         </Link>
 
-        {/* Desktop */}
         <div className="hidden md:flex items-center gap-1">
           {navItems.map((item) => (
             <Link
               key={item.path}
               to={item.path}
-              className={`px-4 py-2 text-sm font-medium rounded-md transition-colors ${
+              className={`story-link px-4 py-2 text-sm font-medium rounded-md transition-colors ${
                 location.pathname === item.path
                   ? "text-primary"
                   : "text-muted-foreground hover:text-foreground"
               }`}
             >
-              {item.label}
+              <span>{item.label}</span>
             </Link>
           ))}
         </div>
@@ -54,7 +53,6 @@ const Navbar = () => {
           </Link>
         </div>
 
-        {/* Mobile toggle */}
         <button
           onClick={() => setOpen(!open)}
           className="md:hidden p-2 text-foreground"
@@ -64,9 +62,8 @@ const Navbar = () => {
         </button>
       </div>
 
-      {/* Mobile menu */}
       {open && (
-        <div className="md:hidden bg-background border-t border-border">
+        <div className="md:hidden bg-background border-t border-border animate-fade-in">
           <div className="container mx-auto py-4 flex flex-col gap-1">
             {navItems.map((item) => (
               <Link

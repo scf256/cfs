@@ -27,31 +27,29 @@ const projectImages = [
 const About = () => {
   return (
     <>
-      {/* Hero */}
       <section className="section-padding bg-card">
         <div className="container mx-auto px-4">
-          <span className="inline-block px-3 py-1 rounded-full text-xs font-semibold tracking-wider uppercase bg-primary/15 text-primary border border-primary/20 mb-4">
+          <span className="inline-block px-3 py-1 rounded-full text-xs font-semibold tracking-wider uppercase bg-primary/15 text-primary border border-primary/20 mb-4 animate-fade-in">
             About Us
           </span>
-          <h1 className="text-4xl md:text-5xl font-heading font-extrabold text-foreground max-w-3xl">
+          <h1 className="text-4xl md:text-5xl font-heading font-extrabold text-foreground max-w-3xl animate-fade-up opacity-0" style={{ animationDelay: "0.15s" }}>
             Uganda's Trusted Partner for{" "}
             <span className="text-primary">High-Performance Flooring</span>
           </h1>
-          <p className="mt-6 text-lg text-muted-foreground max-w-2xl leading-relaxed">
+          <p className="mt-6 text-lg text-muted-foreground max-w-2xl leading-relaxed animate-fade-up opacity-0" style={{ animationDelay: "0.3s" }}>
             Collings Flooring is Uganda's trusted partner for high-performance flooring. We mind zero on where you are – we serve every corner of the country with top-quality materials and expert installation.
           </p>
         </div>
       </section>
 
-      {/* Values */}
       <section className="section-padding">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-heading font-bold text-foreground text-center mb-12">
+          <h2 className="text-3xl font-heading font-bold text-foreground text-center mb-12 animate-fade-in">
             Our <span className="text-primary">Values</span>
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {values.map((v) => (
-              <div key={v.title} className="glass-card rounded-lg p-6">
+            {values.map((v, i) => (
+              <div key={v.title} className="glass-card rounded-lg p-6 hover-scale animate-fade-up opacity-0" style={{ animationDelay: `${0.1 + i * 0.1}s` }}>
                 <v.icon className="w-10 h-10 text-primary mb-4" />
                 <h3 className="font-heading font-semibold text-foreground mb-2">{v.title}</h3>
                 <p className="text-sm text-muted-foreground">{v.desc}</p>
@@ -61,23 +59,23 @@ const About = () => {
         </div>
       </section>
 
-      {/* Project Showcase */}
       <section className="section-padding bg-card">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-heading font-bold text-foreground text-center mb-12">
+          <h2 className="text-3xl font-heading font-bold text-foreground text-center mb-12 animate-fade-in">
             Projects We're <span className="text-primary">Proud Of</span>
           </h2>
           <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-            {projectImages.map((p) => (
-              <div key={p.name} className="rounded-lg overflow-hidden border border-border group">
+            {projectImages.map((p, i) => (
+              <div key={p.name} className="rounded-lg overflow-hidden border border-border group hover-scale animate-fade-up opacity-0" style={{ animationDelay: `${0.1 + i * 0.1}s` }}>
                 <div className="aspect-video overflow-hidden">
                   <img
                     src={p.img}
                     alt={`${p.name} flooring project by Collings Flooring`}
-                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                    loading="lazy"
                   />
                 </div>
-                <div className="p-3">
+                <div className="p-3 bg-background">
                   <p className="text-sm font-medium text-foreground">{p.name}</p>
                 </div>
               </div>
