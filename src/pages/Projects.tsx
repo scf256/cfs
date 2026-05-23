@@ -1,17 +1,29 @@
-import projectHospital from "@/assets/project-hospital.webp";
-import projectLobby from "@/assets/project-lobby.webp";
-import projectFactory from "@/assets/project-factory.webp";
-import projectStamped from "@/assets/project-stamped.webp";
-import projectOffice from "@/assets/project-office.webp";
-import projectDecking from "@/assets/project-decking.webp";
+import polishedConcrete1 from "@/assets/Polished Concrete floors/polished-concrete-1.jpeg";
+import polishedConcrete4 from "@/assets/Polished Concrete floors/polished-concrete-4.jpeg";
+import terrazzo2 from "@/assets/Terrazo concrete floors/terrazzo-2.jpeg";
+import terrazzo4 from "@/assets/Terrazo concrete floors/terrazzo-4.jpeg";
+import stampedConcrete1 from "@/assets/Stamped Concrete/stamped-concrete-1.jpeg";
+import stampedConcrete3 from "@/assets/Stamped Concrete/stamped-concrete-3.jpeg";
+import dm1img1 from "@/assets/Dm1/dm1-1.jpeg";
+import dm1img3 from "@/assets/Dm1/dm1-3.jpeg";
+import epoxy1 from "@/assets/self leveling epoxy/self-leveling-epoxy-1.jpeg";
+import epoxy3 from "@/assets/self leveling epoxy/self-leveling-epoxy-3.jpeg";
+import cushionVinyl1 from "@/assets/Cushion vinly/cushion-vinyl-1.jpeg";
+import homogeneousVinyl2 from "@/assets/homegenous vinly floor/homogeneous-vinyl-2.jpeg";
 
 const projects = [
-  { img: projectHospital, name: "Nsambya Hospital", desc: "Hospital Ward Flooring", type: "Terrazzo" },
-  { img: projectLobby, name: "Pearl Business Park", desc: "Commercial Lobby Flooring", type: "Polished Concrete" },
-  { img: projectFactory, name: "Mukwano Industries", desc: "Factory Floor Coating", type: "Epoxy" },
-  { img: projectStamped, name: "Serena Hotel", desc: "Outdoor Patio Flooring", type: "Stamped Concrete" },
-  { img: projectOffice, name: "Acacia Mall Offices", desc: "Office Vinyl Flooring", type: "Vinyl" },
-  { img: projectDecking, name: "Garden City Terrace", desc: "Rooftop Composite Decking", type: "Composite Decking" },
+  { img: terrazzo2, name: "Commercial Building", desc: "Terrazzo Flooring Installation", type: "Terrazzo" },
+  { img: polishedConcrete1, name: "Modern Office Space", desc: "Polished Concrete Floors", type: "Polished Concrete" },
+  { img: epoxy1, name: "Industrial Warehouse", desc: "Self-Leveling Epoxy Coating", type: "Epoxy" },
+  { img: stampedConcrete1, name: "Residential Patio", desc: "Decorative Stamped Concrete", type: "Stamped Concrete" },
+  { img: dm1img1, name: "Distribution Center", desc: "DM1 Superflat Warehouse Floor", type: "Industrial" },
+  { img: homogeneousVinyl2, name: "Healthcare Facility", desc: "Homogeneous Vinyl Flooring", type: "Vinyl" },
+  { img: polishedConcrete4, name: "Retail Store", desc: "High-Gloss Polished Concrete", type: "Polished Concrete" },
+  { img: stampedConcrete3, name: "Outdoor Walkway", desc: "Stamped Concrete Pathway", type: "Stamped Concrete" },
+  { img: terrazzo4, name: "Shopping Mall", desc: "Terrazzo Floor Restoration", type: "Terrazzo" },
+  { img: dm1img3, name: "Logistics Hub", desc: "VNA Warehouse Flooring", type: "Industrial" },
+  { img: epoxy3, name: "Manufacturing Plant", desc: "Chemical-Resistant Epoxy", type: "Epoxy" },
+  { img: cushionVinyl1, name: "Residential Project", desc: "Cushion Vinyl Installation", type: "Vinyl" },
 ];
 
 const Projects = () => {
@@ -43,7 +55,7 @@ const Projects = () => {
                 <div className="aspect-[4/3] overflow-hidden">
                   <img
                     src={p.img}
-                    alt={`${p.name} – ${p.desc} by Collings Flooring`}
+                    alt={`${p.name} – ${p.desc} by Collins Flooring Solutions`}
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                     loading="lazy"
                   />

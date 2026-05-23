@@ -1,10 +1,10 @@
 import { Shield, Users, MapPin, Award, CheckCircle, Target } from "lucide-react";
-import projectHospital from "@/assets/project-hospital.webp";
-import projectLobby from "@/assets/project-lobby.webp";
-import projectFactory from "@/assets/project-factory.webp";
-import projectStamped from "@/assets/project-stamped.webp";
-import projectOffice from "@/assets/project-office.webp";
-import projectDecking from "@/assets/project-decking.webp";
+import dm1img1 from "@/assets/Dm1/dm1-1.jpeg";
+import fm2img2 from "@/assets/Fm2/fm2-2.jpeg";
+import polishedConcrete3 from "@/assets/Polished Concrete floors/polished-concrete-3.jpeg";
+import stampedConcrete3 from "@/assets/Stamped Concrete/stamped-concrete-3.jpeg";
+import terrazzo4 from "@/assets/Terrazo concrete floors/terrazzo-4.jpeg";
+import selfLevelingEpoxy3 from "@/assets/self leveling epoxy/self-leveling-epoxy-3.jpeg";
 
 const values = [
   { icon: Shield, title: "Quality First", desc: "We use only premium materials and proven techniques." },
@@ -16,12 +16,12 @@ const values = [
 ];
 
 const projectImages = [
-  { img: projectHospital, name: "Nsambya Hospital" },
-  { img: projectLobby, name: "Pearl Business Park" },
-  { img: projectFactory, name: "Mukwano Industries" },
-  { img: projectStamped, name: "Serena Hotel Patio" },
-  { img: projectOffice, name: "Acacia Mall Offices" },
-  { img: projectDecking, name: "Garden City Terrace" },
+  { img: dm1img1, name: "Nsambya Hospital" },
+  { img: fm2img2, name: "Pearl Business Park" },
+  { img: polishedConcrete3, name: "Mukwano Industries" },
+  { img: stampedConcrete3, name: "Serena Hotel Patio" },
+  { img: terrazzo4, name: "Acacia Mall Offices" },
+  { img: selfLevelingEpoxy3, name: "Garden City Terrace" },
 ];
 
 const About = () => {
@@ -37,7 +37,7 @@ const About = () => {
             <span className="text-primary">High-Performance Flooring</span>
           </h1>
           <p className="mt-6 text-lg text-muted-foreground max-w-2xl leading-relaxed animate-fade-up opacity-0" style={{ animationDelay: "0.3s" }}>
-            Collings Flooring is Uganda's trusted partner for high-performance flooring. We mind zero on where you are – we serve every corner of the country with top-quality materials and expert installation.
+            Collins Flooring Solutions is Uganda's trusted partner for high-performance flooring. We mind zero on where you are – we serve every corner of the country with top-quality materials and expert installation.
           </p>
         </div>
       </section>
@@ -70,7 +70,7 @@ const About = () => {
                 <div className="aspect-video overflow-hidden">
                   <img
                     src={p.img}
-                    alt={`${p.name} flooring project by Collings Flooring`}
+                    alt={`${p.name} flooring project by Collins Flooring Solutions`}
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                     loading="lazy"
                   />

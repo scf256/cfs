@@ -2,6 +2,7 @@ import { Link, useLocation } from "react-router-dom";
 import { useState } from "react";
 import { Menu, X, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { ThemeToggle } from "@/components/ThemeToggle";
 
 const navItems = [
   { label: "Home", path: "/" },
@@ -19,11 +20,11 @@ const Navbar = () => {
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-lg border-b border-border shadow-sm">
       <div className="container mx-auto flex items-center justify-between h-16 md:h-20">
         <Link to="/" className="flex items-center gap-2">
-          <div className="w-8 h-8 rounded bg-primary flex items-center justify-center font-heading font-black text-primary-foreground text-sm">
-            CF
+          <div className="w-9 h-9 rounded bg-primary flex items-center justify-center font-heading font-black text-primary-foreground text-xs">
+            CFS
           </div>
           <span className="font-heading font-bold text-lg text-foreground">
-            Collings <span className="text-primary">Flooring</span>
+            Collins <span className="text-primary">Flooring Solutions</span>
           </span>
         </Link>
 
@@ -44,13 +45,11 @@ const Navbar = () => {
         </div>
 
         <div className="hidden md:flex items-center gap-3">
-          <a href="tel:+256705266437" className="flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors">
+          <ThemeToggle />
+          <a href="tel:+256705266437" className="flex items-center gap-2 text-sm font-medium bg-primary/10 text-primary px-4 py-2 rounded-full hover:bg-primary/20 transition-colors">
             <Phone className="w-4 h-4" />
             0705 266 437
           </a>
-          <Link to="/contact">
-            <Button size="sm">Get a Quote</Button>
-          </Link>
         </div>
 
         <button
@@ -79,9 +78,14 @@ const Navbar = () => {
                 {item.label}
               </Link>
             ))}
-            <Link to="/contact" onClick={() => setOpen(false)} className="mt-2">
-              <Button className="w-full" size="sm">Get a Quote</Button>
-            </Link>
+            <div className="flex items-center justify-between px-4 py-3 mt-2 border-t border-border">
+              <span className="text-sm font-medium text-muted-foreground">Theme</span>
+              <ThemeToggle />
+            </div>
+            <a href="tel:+256705266437" className="flex items-center gap-2 text-sm font-medium bg-primary/10 text-primary px-4 py-3 rounded-md hover:bg-primary/20 transition-colors mx-1 mt-1">
+              <Phone className="w-4 h-4" />
+              0705 266 437
+            </a>
           </div>
         </div>
       )}

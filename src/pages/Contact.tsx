@@ -98,6 +98,27 @@ const Contact = () => {
           </div>
         </div>
       </section>
+
+      {/* Google Map */}
+      <section className="section-padding bg-card pt-0">
+        <div className="container mx-auto px-4">
+          <h2 className="text-2xl font-heading font-bold text-foreground mb-6 text-center">Find Us</h2>
+          <div className="rounded-2xl overflow-hidden border border-border shadow-lg">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.7576!2d32.554287!3d0.294373!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMMKwMTcnMzkuNyJOIDMywrAzMycxNS40IkU!5e0!3m2!1sen!2sug!4v1709123456789!5m2!1sen!2sug"
+              width="100%"
+              height="450"
+              style={{ border: 0 }}
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              title="Collins Flooring Solutions Location"
+              className="w-full"
+            ></iframe>
+          </div>
+          <p className="text-center text-muted-foreground mt-4">Kampala, Uganda – We serve nationwide</p>
+        </div>
+      </section>
     </>
   );
 };

@@ -9,11 +9,11 @@ const Footer = () => {
           {/* Brand */}
           <div>
             <div className="flex items-center gap-2 mb-4">
-              <div className="w-8 h-8 rounded bg-primary flex items-center justify-center font-heading font-black text-primary-foreground text-sm">
-                CF
+              <div className="w-9 h-9 rounded bg-primary flex items-center justify-center font-heading font-black text-primary-foreground text-xs">
+                CFS
               </div>
               <span className="font-heading font-bold text-lg text-foreground">
-                Collings <span className="text-primary">Flooring</span>
+                Collins <span className="text-primary">Flooring Solutions</span>
               </span>
             </div>
             <p className="text-muted-foreground text-sm leading-relaxed">
@@ -62,7 +62,7 @@ const Footer = () => {
 
         <div className="border-t border-border mt-10 pt-6 text-center">
           <p className="text-xs text-muted-foreground">
-            © 2026 Collings Flooring. All rights reserved.
+            © 2026 Collins Flooring Solutions. All rights reserved.
           </p>
         </div>
       </div>
