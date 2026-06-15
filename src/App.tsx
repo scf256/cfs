@@ -14,8 +14,6 @@ import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
-const basePath = import.meta.env.VITE_BASE_PATH ?? "/";
-const routerBasename = basePath === "./" ? "/" : basePath.replace(/\/$/, "");
 
 const App = () => (
   <QueryClientProvider client={queryClient}>
@@ -23,7 +21,7 @@ const App = () => (
       <TooltipProvider>
         <Toaster />
         <Sonner />
-        <BrowserRouter basename={routerBasename}>
+        <BrowserRouter basename="/">
           <ScrollToTop />
           <Layout>
           <Routes>
